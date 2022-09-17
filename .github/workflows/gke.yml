@@ -14,7 +14,7 @@ env:
   GITHUB_SHA: ${{ github.sha }}
   GKE_ZONE: us-central1
   GKE_CLUSTER: cicd-project
-  IMAGE: cicd-project
+  IMAGE: cicd-project-image
   REGISTRY_HOSTNAME: us.gcr.io
   DEPLOYMENT_NAME: cicd-project
 
