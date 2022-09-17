@@ -60,7 +60,7 @@ jobs:
           --zone $GKE_ZONE \
           --project $GKE_PROJECT
         helm repo update
-        helm upgrade $GKE_PROJECT $GKE_PROJECT-cluster \
+        helm upgrade $GKE_PROJECT $GKE_PROJECT-cluster/ \
           --set cicd-project.image.tag=$GITHUB_SHA \
           --wait
         kubectl rollout status deployment/$DEPLOYMENT_NAME
