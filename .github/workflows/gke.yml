@@ -59,6 +59,7 @@ jobs:
         gcloud container clusters get-credentials $GKE_CLUSTER \
           --zone $GKE_ZONE \
           --project $GKE_PROJECT
+        helm repo update
         helm upgrade $GKE_PROJECT $GKE_PROJECT-cluster \
           --set cicd-project.image.tag=$GITHUB_SHA \
           --wait
